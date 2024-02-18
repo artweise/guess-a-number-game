@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#play-btn {
+    border: 2px solid currentColor;
+    border-radius: 3rem;
+    color: #030345;
+    font-family: roboto;
+    font-size: 4rem;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+#play-btn::after {
+    background-color: #030345;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+#play-btn:hover::after {
+    transform: translate(0, 0);
+}
+
+#play-btn:hover {
+    border: 2px solid transparent;
+    color: #fcfcfd;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 650px;
+    transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+    color: #fcfcfd;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 24px 36px;
+    text-decoration: none;
+    z-index: 0;
+    background-color: #030345;
+    border-radius: 3rem;
+    text-align: center;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fcfcfd;
+}
+
+.ctn {
+    display: flex;
+
+}
+
+#close-modal-btn {
+    border: 2px solid #fcfcfd;
+    background-color: #fcfcfd;
+    border-radius: 2rem;
+    color: #030345;
+    font-family: roboto;
+    font-size: 26px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0.3rem 4rem;
+    margin-top: 4rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+#close-modal-btn::after {
+    background-color: #030345;
+    border-radius: 2rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+#close-modal-btn:hover::after {
+    transform: translate(0, 0);
+}
+
+#close-modal-btn:hover {
+    border: 2px solid transparent;
+    color: #fcfcfd;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 1rem;
+    color: #030345;
+    font-family: roboto;
+    border: 2px solid #030345;
+    height: 400px;
+    width: 650px;
+    border-radius: 3rem;
+}
+
+#try-input {
+    border: 2px solid #030345;
+    /* background-color: #030345; */
+    border-radius: 2rem;
+    font-family: roboto;
+    font-size: 1rem;
+    font-weight: 100;
+    /* overflow: hidden; */
+    padding: 0.5rem;
+    margin: 1.5rem;
+    /* position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0; */
+}
+
+#go-button {
+    border: 2px solid #030345;
+    background-color: #fcfcfd;
+    border-radius: 3rem;
+    color: #030345;
+    font-family: roboto;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 0.5rem 4rem;
+}

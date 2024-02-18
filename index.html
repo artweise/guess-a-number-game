@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      #modal.open {
+        display: block;
+      }
+      #overlay.open {
+        display: block;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a id="play-btn" href="#">Let's play</a>
+
+    <div id="overlay"></div>
+
+    <div id="modal">
+      <p>
+        Rules: Players are required to choose the first and last numbers to establish a numeric
+        range. The program will generate a mystery number within the specified range. Players can
+        make a guess, including their chosen first and last numbers if desired.
+      </p>
+      <div class="ctn">
+        <div class="number-ctn">
+          <label for="min">First number</label>
+          <input type="text" id="min" class="input" autocomplete="off" inputmode="numeric" />
+        </div>
+        <div class="number-ctn">
+          <label for="max">Last number</label>
+          <input type="text" id="max" class="input" autocomplete="off" inputmode="numeric" />
+        </div>
+      </div>
+
+      <button id="close-modal-btn" type="submit">Go!</button>
+    </div>
+  </body>
+</html>
